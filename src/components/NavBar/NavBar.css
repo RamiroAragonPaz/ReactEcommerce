@@ -1,0 +1,22 @@
+
+header{
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 0 3px #00000082;
+  }
+  ul {
+    display: flex;
+    list-style: none;
+    margin-right: 2vw;
+  }
+  li{
+    margin-left: 1vw;
+  }
+  .img-header {
+    width: 15vw;
+    margin-left: 2vw;
+  }
+  .cart{
+    align-self: center;
+  }
