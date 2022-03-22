@@ -1,0 +1,21 @@
+.ItemListContainer {
+    margin-top: 5vh;
+    margin-left: 2.5vw;
+    display: grid;
+    justify-content: space-evenly;
+    grid-template-columns: 4fr 4fr 4fr;
+    grid-column-gap: 2vw;
+    grid-row-gap: 2vw;
+    margin-bottom: 10vh;
+}
+.card {
+    justify-self: center;
+    max-width: 20vw;
+    min-height: auto ;
+
+}
+h2 {
+    margin-top: 5vh;
+    margin-left: 7.5vw;
+    color: #b80909
+}

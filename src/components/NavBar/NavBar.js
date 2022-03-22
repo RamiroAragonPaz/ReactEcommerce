@@ -1,7 +1,7 @@
 import React from 'react'
 import Button from '@mui/material/Button';
 import './NavBar.css';
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import CarWidget from './CarWidget';
 
 function NavBar() {
 
@@ -15,10 +15,10 @@ function NavBar() {
                 <li><Button color="error">Products</Button></li>
                 <li><Button color="error">About</Button></li>
                 <li><Button color="error">Contact</Button></li>
-                <Button  color="error"><ShoppingCartIcon className="cart" color="error" /></Button>
+                <CarWidget />
             </ul>
         </header>
     )
 }
 
-export default NavBar
+export default NavBar;
