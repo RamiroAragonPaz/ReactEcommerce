@@ -6,6 +6,7 @@ import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import ItemCount from '../CardButtons/ItemCount';
 
 
 const bull = (
@@ -33,8 +34,12 @@ export default function BasicCard(props) {
         </Typography>
       </CardContent>
       <CardActions>
-      <Button variant="contained" color="error">Comprar</Button>
+        <ItemCount />
+        
       </CardActions>
+      <div className="cart-add">
+            <Button variant="contained" color="error">Agregar al carrito</Button>
+        </div>
     </Card>
   );
 }

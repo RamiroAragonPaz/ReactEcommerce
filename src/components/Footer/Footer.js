@@ -5,7 +5,7 @@ function Footer(){
     
     return(
         <footer>
-            <p>Copyright 2021 por Ramiro Aragón Paz</p>
+            <p>Copyright 2022 por Ramiro Aragón Paz</p>
 		    <p>Todos los derechos reservados</p>
         </footer>
     )

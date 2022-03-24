@@ -19,3 +19,11 @@ h2 {
     margin-left: 7.5vw;
     color: #b80909
 }
+.Buttons{
+    display: flex;  
+    margin: auto;
+}
+.cart-add{
+    margin-left: 3.5vw;
+    margin-bottom: 1vh;
+}
