@@ -7,6 +7,7 @@ import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import ItemCount from '../CardButtons/ItemCount';
+import ItemList from '../ListProducts/ItemList'
 
 
 const bull = (
@@ -18,28 +19,28 @@ const bull = (
   </Box>
 );
 
-export default function BasicCard(props) {
+export default function BasicCard( {data} ) {
+  const { title, description, price, duration, id} = data
   return (
     <Card className="card" sx={{ minWidth: 275 }}>
       <CardContent>
         <Typography variant="h5" component="div">
-        {props.title}
+          {title}
         </Typography>
         <Typography sx={{ mb: 1.5 }} color="text.secondary">
-        <p>{props.description}</p>
+          <p>{description}</p>
         </Typography>
         <Typography variant="body2">
-        <p>Precio: ${props.price}</p>
-        <p>Duración: {props.duration}</p>
+          <p>Precio: ${price}</p>
+          <p>Duración: {duration}</p>
         </Typography>
       </CardContent>
       <CardActions>
-        <ItemCount />
-        
+        <ItemCount /> 
       </CardActions>
       <div className="cart-add">
             <Button variant="contained" color="error">Agregar al carrito</Button>
-        </div>
+      </div>
     </Card>
   );
 }
