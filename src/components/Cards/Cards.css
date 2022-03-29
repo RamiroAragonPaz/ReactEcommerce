@@ -22,9 +22,16 @@
 }
 .Buttons{
     display: flex;  
-    margin: auto;
+    margin-left: 2vw;
 }
 .cart-add{
-    margin-left: 3.5vw;
+    margin-left: 2.5vw;
     margin-bottom: 1vh;
+}
+.image-container{
+    max-width: fit-content;
+    max-height: auto;
+    overflow: hidden;
+    margin-bottom: 2vh;
+   
 }

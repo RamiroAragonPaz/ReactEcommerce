@@ -7,7 +7,7 @@ import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import ItemCount from '../CardButtons/ItemCount';
-import ItemList from '../ListProducts/ItemList'
+import ItemDetail from '../ListProducts/ItemDetail/ItemDetail'
 
 
 const bull = (
@@ -20,10 +20,13 @@ const bull = (
 );
 
 export default function BasicCard( {data} ) {
-  const { title, description, price, duration, id} = data
+  const { title, description, price, duration, image, id, stock, initial} = data
   return (
     <Card className="card" sx={{ minWidth: 275 }}>
       <CardContent>
+        <div className="image-container">
+        <img className="image"  src={`./${image}`} alt={image} />
+        </div>
         <Typography variant="h5" component="div">
           {title}
         </Typography>
@@ -36,11 +39,8 @@ export default function BasicCard( {data} ) {
         </Typography>
       </CardContent>
       <CardActions>
-        <ItemCount /> 
+        <ItemCount title={title} initial={initial} stock={stock}/> 
       </CardActions>
-      <div className="cart-add">
-            <Button variant="contained" color="error">Agregar al carrito</Button>
-      </div>
     </Card>
   );
 }
