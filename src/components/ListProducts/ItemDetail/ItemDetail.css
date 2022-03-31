@@ -1,0 +1,30 @@
+.ItemDetailContainer {
+    display: grid;
+    margin: 5vw
+}
+.detailcontent{
+    display: flex;
+    justify-content: center;
+}
+h4{
+    margin: auto;
+    font-size: 2.5rem;
+    padding-bottom: 3vh;
+}
+.detail-description{
+    width: 20vw;
+}
+.detail-img{
+    margin-right: 5vw;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.514);
+    border-radius: 5%;
+}
+.detail-price{
+    font-size: 1.5rem;
+}
+.detail-duration, .detail-descriptiontitle{
+    font-size: 1.25rem;
+}
+.detail-description{
+    color: rgb(105, 104, 104);
+}

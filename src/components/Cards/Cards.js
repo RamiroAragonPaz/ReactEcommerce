@@ -4,10 +4,8 @@ import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
-import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import ItemCount from '../CardButtons/ItemCount';
-import ItemDetail from '../ListProducts/ItemDetail/ItemDetail'
 
 
 const bull = (
@@ -39,7 +37,7 @@ export default function BasicCard( {data} ) {
         </Typography>
       </CardContent>
       <CardActions>
-        <ItemCount title={title} initial={initial} stock={stock}/> 
+        <ItemCount id={id} title={title} initial={initial} stock={stock}/> 
       </CardActions>
     </Card>
   );

@@ -1,7 +1,9 @@
 import ItemDetails from './ItemDetail'
 
 
+
 const ItemDetailContainer = () =>{
+    
     
     return (
         <div>
@@ -16,3 +18,4 @@ const ItemDetailContainer = () =>{
 }
 
 export default ItemDetailContainer;
+

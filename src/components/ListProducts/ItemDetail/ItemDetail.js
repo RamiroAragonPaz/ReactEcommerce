@@ -1,39 +1,47 @@
 import { ProductionQuantityLimits } from '@mui/icons-material';
 import React, { useState, useEffect } from 'react'
-import Item from '../Item';
+import mockProducts from '../ItemDetail/MockProduct';
+import './ItemDetail.css'
+import Button from '@mui/material/Button';
 
-console.log(Item)
 
 const ItemDetails = () => {
-    const [details, setDetails] = useState([])
+    const [Items, setItems] = useState([])
+
     
-    const getDetails = () => {
+    const getItem = () => {
             return new Promise((resolve, reject) => {
                 setTimeout( () => {
-                return resolve(Item ) 
-            }, 2000)
+                return resolve(mockProducts)  
+            }, 4000)
         })
     }
 
-    useEffect( () => {
-        getDetails().then((data)=>{
-            setDetails(data)
-            })
-        }, [])
+  
+useEffect( () => {
+    getItem().then((Item)=>{
+        setItems(Item)
+        })
+    }, [])
 
 
     return (
-        <div className="ItemDetailContainer">   
-        {details.map((detail)=>{
-            return (
+        <div className="ItemDetailContainer">           
+            <h4>{Items.title}</h4>
+            <div className='detailcontent'>
+                <img className='detail-img' src={Items.image} />
                 <div>
-                    <p>Nombre: {detail.title}</p>
+                    <p className='detail-price' >Precio: ${Items.price}</p>
+                    <p className='detail-duration' >Duración: {Items.duration}</p>
+                    <p className='detail-descriptiontitle'>Descripción:</p>
+                    <p className='detail-description'>{Items.description}</p>    
+                    <Button variant="contained" color="error" >Comprar</Button>
                 </div>
-            )
-        })}
-        
+            </div>
+            
         </div>
     )
 }
 
 export default ItemDetails;
+

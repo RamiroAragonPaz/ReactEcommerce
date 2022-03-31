@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import Button from '@mui/material/Button';
+import ItemDetailContainer from '../ListProducts/ItemDetail/ItemDetailContainer';
+import Item from '../ListProducts/Item';
 
-export default function ItemCount ({title, stock, initial}) {
+export default function ItemCount ({title, stock, initial, id}) {
     
     
     const [ count, setCount ] = useState(initial);
@@ -21,7 +23,9 @@ export default function ItemCount ({title, stock, initial}) {
 }
     const onAdd = () => {
         if (count > 0 ){
-            alert("Elegiste: " + count + " " + title)
+            alert("Elegiste: " + count + " " + title);
+        } else if (count <= 0 ){
+            alert("No elegiste la cantidad de tu producto")
         }
 }
     
@@ -31,7 +35,7 @@ export default function ItemCount ({title, stock, initial}) {
                 <Button color="error"  onClick={removeItem}>-</Button><p>Comprar: {count}</p><Button color="error" onClick={addItem}>+</Button>
             </div>
             <div className="cart-add">
-                <Button variant="contained" color="error" onClick={onAdd}>Agregar al carrito</Button>
+                <Button id={id} variant="contained" color="error" onClick={onAdd}>Agregar al carrito</Button>
             </div>
         </div>
     )
