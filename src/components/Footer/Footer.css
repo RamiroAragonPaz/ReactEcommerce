@@ -1,7 +1,8 @@
 footer {
+    position: static;
     bottom: 0;
     display: flex;
-    width: auto;
+    width: 100%;
     justify-content: space-around;
     color: white;
     background-color: #b80909;

@@ -3,6 +3,7 @@ import React from 'react'
 const Item = [
     {
         id: 1,
+        category: "Planes",
         image: 'IMG_7742.jpeg',
         title: "Plan 1", 
         duration: "1 Mes",
@@ -13,6 +14,7 @@ const Item = [
     },
     {
         id: 2,
+        category: "Planes",
         image: 'IMG_7738.jpg',
         title: "Plan 2", 
         duration: "2 Meses",
@@ -23,6 +25,7 @@ const Item = [
     },
     {
         id: 3,
+        category: "Planes",
         image: 'IMG_7590.jpg',
         title: "Plan 3", 
         duration: "3 Meses",
@@ -34,6 +37,7 @@ const Item = [
     {
         
         id: 4,
+        category: "Recetarios",
         image: 'IMG_7620.jpg',
         title: "Recetario 1", 
         duration: "1 Mes",
@@ -44,6 +48,7 @@ const Item = [
     },
     {
         id: 5,
+        category: "Recetarios",
         image: 'IMG_7709.jpg',
         title: "Recetario 2", 
         duration: "2 Meses",
@@ -54,6 +59,7 @@ const Item = [
     },
     {
         id: 6,
+        category: "PlanesIntegrales",
         image: '_DSC6175 copia.jpg',
         title: "Plan Integral",
         duration: "3 Meses",

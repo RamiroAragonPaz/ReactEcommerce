@@ -1,6 +1,6 @@
 
 header{
-    width: 100vw;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     box-shadow: 0 0 3px #00000082;
@@ -19,4 +19,8 @@ header{
   }
   .cart{
     align-self: center;
+  }
+  a {
+    text-decoration: none;
+    color: #b80909
   }

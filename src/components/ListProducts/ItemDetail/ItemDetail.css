@@ -1,6 +1,6 @@
 .ItemDetailContainer {
     display: grid;
-    margin: 5vw
+    margin-bottom: 15vh;
 }
 .detailcontent{
     display: flex;
@@ -27,4 +27,11 @@ h4{
 }
 .detail-description{
     color: rgb(105, 104, 104);
+}
+.detail-img-big {
+    width: auto;
+    min-height: 60vh ;
+    margin-right: 5vw;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.514);
+    border-radius: 5%;
 }

@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import Button from '@mui/material/Button';
 import ItemDetailContainer from '../ListProducts/ItemDetail/ItemDetailContainer';
 import Item from '../ListProducts/Item';
+import { Link } from 'react-router-dom'
+
 
 export default function ItemCount ({title, stock, initial, id}) {
     
@@ -35,7 +37,7 @@ export default function ItemCount ({title, stock, initial, id}) {
                 <Button color="error"  onClick={removeItem}>-</Button><p>Comprar: {count}</p><Button color="error" onClick={addItem}>+</Button>
             </div>
             <div className="cart-add">
-                <Button id={id} variant="contained" color="error" onClick={onAdd}>Agregar al carrito</Button>
+                <Button id={id} variant="contained" color="error">Ver Más</Button>
             </div>
         </div>
     )
