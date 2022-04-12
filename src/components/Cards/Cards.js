@@ -8,7 +8,7 @@ import Typography from '@mui/material/Typography';
 import ItemCount from '../CardButtons/ItemCount';
 import ItemDetail from '../ListProducts/ItemDetail/ItemDetailContainer'
 import { Link } from 'react-router-dom'
-
+import Button from '@mui/material/Button';
 
 const bull = (
   <Box
@@ -40,8 +40,8 @@ export default function BasicCard( {data} ) {
             <p>Duración: {duration}</p>
           </Typography>
         </CardContent>
-        <CardActions>
-          <ItemCount id={id} title={title} initial={initial} stock={stock}/>
+        <CardActions className='seeMore'>
+        <Button color="error" variant="contained" >Ver Más</Button>
         </CardActions>
       </Link>
     </Card>

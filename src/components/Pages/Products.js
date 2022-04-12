@@ -6,7 +6,7 @@ import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import Item from '../ListProducts/Item';
 
-export default function BasicSelect() {
+/* export default function BasicSelect() {
   const [select, setAge] = React.useState('');
   const { title, description, category,  price, duration, image, id, stock, initial} = Item
   const handleChange = (event) => {
@@ -31,4 +31,4 @@ export default function BasicSelect() {
       </FormControl>
     </Box>
   );
-}
+} */

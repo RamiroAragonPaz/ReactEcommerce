@@ -20,12 +20,11 @@
     margin-left: 7.5vw;
     color: #b80909
 }
-.Buttons{
+.buttons{
     display: flex;  
-    margin-left: 2vw;
+    justify-content: space-around;
 }
 .cart-add{
-    margin-left: 6vw;
     margin-bottom: 1vh;
 }
 .image-container{
@@ -36,4 +35,8 @@
 }
 .Typography {
     color: black;   
+}
+.seeMore{
+    display: flex;
+    justify-content: center;
 }
