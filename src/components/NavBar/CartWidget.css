@@ -1,0 +1,28 @@
+.cart{
+    display: flex;
+    align-items: baseline;
+    margin: 0;  
+    align-self: center;
+  }
+.cart-text{
+    align-self: center;
+    margin: 0;
+    color: #b80909
+}
+.cart-image{
+  margin-right: 2vw;
+  max-height: 20vh ;
+}
+.carrito{
+  min-height: 100vh;
+}
+.carrito li{
+  margin:  0vh 0 0vh 5vw;
+}
+.title{
+  margin: 3vh 0 2vh 6vw;
+}
+.texto{
+
+  margin: 0 5vw 0 0vw;
+}

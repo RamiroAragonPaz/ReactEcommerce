@@ -9,6 +9,8 @@ import ItemCount from '../CardButtons/ItemCount';
 import ItemDetail from '../ListProducts/ItemDetail/ItemDetailContainer'
 import { Link } from 'react-router-dom'
 import Button from '@mui/material/Button';
+import { CartContext } from '../Context/CartContext'
+import { useContext } from 'react'
 
 const bull = (
   <Box
@@ -21,6 +23,9 @@ const bull = (
 
 export default function BasicCard( {data} ) {
   const { title, description, category,  price, duration, image, id, stock, initial} = data
+
+  const { cartProducts, addProducts} = useContext(CartContext)
+  
   return (
     
     <Card className="card" sx={{ minWidth: 275 }}>

@@ -59,7 +59,7 @@ const Item = [
     },
     {
         id: 6,
-        category: "PlanesIntegrales",
+        category: "Planesintegrales",
         image: '_DSC6175 copia.jpg',
         title: "Plan Integral",
         duration: "3 Meses",

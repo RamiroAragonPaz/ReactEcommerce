@@ -5,10 +5,11 @@ header{
     justify-content: space-between;
     box-shadow: 0 0 3px #00000082;
   }
-  ul {
+  .ulNavbar {
     display: flex;
     list-style: none;
     margin-right: 2vw;
+    align-items: flex-start;
   }
   li{
     margin-left: 1vw;
@@ -16,9 +17,6 @@ header{
   .img-header {
     width: 15vw;
     margin-left: 2vw;
-  }
-  .cart{
-    align-self: center;
   }
   a {
     text-decoration: none;
