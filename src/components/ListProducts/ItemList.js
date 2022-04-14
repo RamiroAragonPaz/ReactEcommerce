@@ -10,7 +10,7 @@ const ItemList = () => {
         return new Promise ((resolve, reject) => {
             return setTimeout(()=> {
                 resolve(Item);
-            }, 1);
+            }, 2000);
         });
     }
 

@@ -10,7 +10,7 @@ const Item = [
         description: "Plan Nutricional Completo. Incluye seguimiento perzonalizado y videollamadas de control ",
         price: 500,
         stock: 5,
-        initial: 0,
+        initial: 1,
     },
     {
         id: 2,
@@ -32,7 +32,7 @@ const Item = [
         description: "Plan Nutricional Completo. Incluye seguimiento perzonalizado y videollamadas de control ",
         price: 1400,
         stock: 5,
-        initial: 0,
+        initial: 1,
     },
     {
         
@@ -44,7 +44,7 @@ const Item = [
         description: "Recetario Completo. Incluye 30 opciones de preparaciones con recetas y combinaciones posibles",
         price: 200,
         stock: 5,
-        initial: 0,
+        initial: 1,
     },
     {
         id: 5,
@@ -55,7 +55,7 @@ const Item = [
         description: "Recetario Completo. Incluye 60 opciones de preparaciones con recetas y combinaciones posibles",
         price: 400,
         stock: 5,
-        initial: 0,
+        initial: 1,
     },
     {
         id: 6,
@@ -66,7 +66,7 @@ const Item = [
         description: "Plan Nutricional Completo. Incluye seguimiento perzonalizado, videollamadas de control y recetario completo el cual contiene mas de 60 opciones de preparaciones con recetas y combinaciones posibles", 
         price: 2000,
         stock: 5,
-        initial: 0,
+        initial: 1,
     }
 ];
 export default Item;

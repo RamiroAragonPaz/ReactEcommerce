@@ -11,7 +11,7 @@ export default function ItemCount ({ action1, action2, action3 }) {
         <div className="buttons">
             <Button color="error"  onClick={action3}>-</Button>
             <div className="cart-add">
-            <Button variant="contained" color="error" onClick={action1}>Comprar</Button>
+            <Button variant="contained" color="error" onClick={action1}>Agregar al carrito</Button>
             </div>
             <Button color="error" onClick={action2}>+</Button>
         </div>
