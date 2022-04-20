@@ -1,16 +1,19 @@
 import React, { useState, useEffect, useContext } from 'react'
 import './ItemDetail.css'
 import { useParams } from 'react-router-dom';
-import Item from '../Item'
+import { useNavigate } from 'react-router-dom'
 import ItemCount from '../../CardButtons/ItemCount';
-import { CartContext } from '../../Context/CartContext'
+import { CartContext } from '../../Context/CartContext';
+import { doc, getDoc } from 'firebase/firestore';
+import db from '../../../Firebase/Firebase'
 
 const ItemDetails = ({data}) => {
     const { id }  = useParams()
+    console.log(id);
     const [product, setProduct] = useState({})
     const { title, description, price, duration, image, stock, initial } = product
-    const [count, setCount] = useState(0)
-
+    const [count, setCount] = useState(1)
+    const navigate = useNavigate()
     const { cartProducts, addProducts } = useContext(CartContext)
     
     
@@ -21,25 +24,27 @@ const ItemDetails = ({data}) => {
             addProducts(product)
         } else if (count <= 0 ){
             alert("No elegiste la cantidad de tu producto")
+            navigate('/error')
         }
     }
 
-
-
-    useEffect( () => {
-        filterProductById(Item , id)
-    }, [id])
-
-    const filterProductById = (array , id ) => {
-        return array.map((product)=>{
-            if(product.id == id) {
-                return setProduct(product)
-            }
-        })
+    const getProduct = async() => {
+        const docRef = doc(db, "productos", id);
+        const docSnap = await getDoc(docRef);
+        if (docSnap.exists()) {
+            console.log("Document data:", docSnap.data());
+            let product = docSnap.data()
+            product.id = docSnap.id
+            setProduct(product)
+          } else {
+            console.log("No such document!");
+          }
     }
 
-
-
+    useEffect( () => {
+        getProduct()
+    }, [id])
+ 
     const addItem = () => {
         if (count < stock) {
         setCount(count + 1)
