@@ -23,10 +23,33 @@
   margin: 3vh 0 2vh 6vw;
 }
 .texto{
-
   margin: 0 5vw 0 0vw;
 }
-.botonContinue {
+.texto2{
+  text-align: center;
+  justify-self: center;
+  margin: 0 2.5vw 0 2.5vw;
+}
+.total {
+  text-align: center;
+  margin: 0 2.5vw 1vh 2.5vw;
+}
+.resumen{
+  color: #b80909;
+  align-content: center;
+  justify-content: center;
+  padding: 1vw;
+}
+.bottomMenu {
+  display: flex;
+  justify-content: space-evenly;
   margin-left: 6vw;
   margin-top: 50px;
+}
+.finalizar{
+  margin: auto;
+}
+.modal{
+  min-width: 50vw !important;
+  height: auto;
 }

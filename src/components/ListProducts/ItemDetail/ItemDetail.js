@@ -9,7 +9,6 @@ import db from '../../../Firebase/Firebase'
 
 const ItemDetails = ({data}) => {
     const { id }  = useParams()
-    console.log(id);
     const [product, setProduct] = useState({})
     const { title, description, price, duration, image, stock, initial } = product
     const [count, setCount] = useState(1)
@@ -20,7 +19,6 @@ const ItemDetails = ({data}) => {
     const addOnCart = () => {
         
         if (count > 0 ){
-            console.log("cart:", cartProducts)
             addProducts(product)
         } else if (count <= 0 ){
             alert("No elegiste la cantidad de tu producto")
@@ -32,7 +30,6 @@ const ItemDetails = ({data}) => {
         const docRef = doc(db, "productos", id);
         const docSnap = await getDoc(docRef);
         if (docSnap.exists()) {
-            console.log("Document data:", docSnap.data());
             let product = docSnap.data()
             product.id = docSnap.id
             setProduct(product)
@@ -56,11 +53,6 @@ const ItemDetails = ({data}) => {
     if (count > 0){
     setCount(count - 1)
     }
-}
-
-    const onAdd = () => {
-        
-      
 }
     
     return (
