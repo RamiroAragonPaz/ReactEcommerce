@@ -7,6 +7,7 @@ import { CartContext } from '../../Context/CartContext';
 import { doc, getDoc } from 'firebase/firestore';
 import db from '../../../Firebase/Firebase'
 
+
 const ItemDetails = ({data}) => {
     const { id }  = useParams()
     const [product, setProduct] = useState({})
@@ -14,14 +15,14 @@ const ItemDetails = ({data}) => {
     const [count, setCount] = useState(1)
     const navigate = useNavigate()
     const { cartProducts, addProducts } = useContext(CartContext)
-    
-    
+
+
     const addOnCart = () => {
-        
         if (count > 0 ){
             addProducts(product)
+        } else if (count > 1){
+          alert('Producto ya agregado')
         } else if (count <= 0 ){
-            alert("No elegiste la cantidad de tu producto")
             navigate('/error')
         }
     }
@@ -41,20 +42,7 @@ const ItemDetails = ({data}) => {
     useEffect( () => {
         getProduct()
     }, [id])
- 
-    const addItem = () => {
-        if (count < stock) {
-        setCount(count + 1)
-    } else {
-        alert('Alcanzaste el maximo de Stock disponible!')
-    }
-}
-    const removeItem = () => {
-    if (count > 0){
-    setCount(count - 1)
-    }
-}
-    
+   
     return (
         <div className="ItemDetailContainer">           
             <h4>{title}</h4>
@@ -66,7 +54,7 @@ const ItemDetails = ({data}) => {
                     <p className='detail-descriptiontitle'>Cantidad: {count}</p>
                     <p className='detail-descriptiontitle'>Descripción:</p>
                     <p className='detail-description'>{description}</p>    
-                    <ItemCount action1={addOnCart} action2={addItem} action3={removeItem} data={product}/>
+                    <ItemCount action1={addOnCart} data={product}/>
                 </div>
             </div>
             

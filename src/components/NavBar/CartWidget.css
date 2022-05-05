@@ -9,9 +9,24 @@
     margin: 0;
     color: #b80909
 }
-.cart-image{
-  margin-right: 2vw;
-  max-height: 20vh ;
+.menuCart{
+  min-width: 30vw!important;
+}
+
+.miniCart-image{
+  margin-top: 2vh;
+  min-height: 6.5vh;
+  width: 2vw;
+  margin-left: 0vw;
+  margin-right: .5vw;
+}
+.miniCarrito-items{
+  justify-content: space-between!important;
+}
+.textoMiniCart{
+  margin: 0;
+  width: 5vw;
+  align-self: flex-start 
 }
 .carrito{
   min-height: 100vh;
@@ -30,26 +45,4 @@
   justify-self: center;
   margin: 0 2.5vw 0 2.5vw;
 }
-.total {
-  text-align: center;
-  margin: 0 2.5vw 1vh 2.5vw;
-}
-.resumen{
-  color: #b80909;
-  align-content: center;
-  justify-content: center;
-  padding: 1vw;
-}
-.bottomMenu {
-  display: flex;
-  justify-content: space-evenly;
-  margin-left: 6vw;
-  margin-top: 50px;
-}
-.finalizar{
-  margin: auto;
-}
-.modal{
-  min-width: 50vw !important;
-  height: auto;
-}
+

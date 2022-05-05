@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import Item from './Item';
 import BasicCard from '../Cards/Cards';
 import { useParams } from 'react-router-dom';
 import CircularProgress from '@mui/material/CircularProgress';
@@ -22,11 +21,6 @@ const ItemList = () => {
             }
         )
         return productList
-        /* return new Promise ((resolve, reject) => {
-            return setTimeout(()=> {
-                resolve(Item);
-            }, 1000);
-        }); */
     }
 
     const filterProductByCategory = (array , category) => {

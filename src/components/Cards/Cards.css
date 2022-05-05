@@ -8,11 +8,19 @@
     grid-row-gap: 2vw;
     margin-bottom: 10vh;
 }
-.card {
+.card{
     justify-self: center;
-    max-width: 20vw;
-    min-height: auto ;
-
+    max-width: 17.5vw;
+    min-height: auto;
+    border-radius: 2.5%;
+}
+.card:hover{
+    transform: scale(1.05);
+    transition: 200ms;
+}
+.card:not(:hover) {
+    transform: scale(1);
+    transition: 100ms;
 }
 .subtitle {
     font-weight: 300;
@@ -20,18 +28,19 @@
     margin-left: 7.5vw;
     color: #b80909
 }
-.buttons{
-    display: flex;  
-    justify-content: space-around;
-}
-.cart-add{
-    margin-bottom: 1vh;
-}
+
 .image-container{
-    max-width: fit-content;
-    max-height: auto;
-    overflow: hidden;
+    display:flex;
+    justify-content: center;
     margin-bottom: 2vh;
+    
+}
+.image{
+    border-radius: 2.5%;
+    height: 50vh;
+    width:min-content;
+    max-width: 17vw;
+    overflow: hidden;
 }
 .Typography {
     color: black;   

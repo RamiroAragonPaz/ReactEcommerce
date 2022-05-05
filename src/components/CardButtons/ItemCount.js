@@ -1,19 +1,21 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react'
 import Button from '@mui/material/Button';
-import ItemDetailContainer from '../ListProducts/ItemDetail/ItemDetailContainer';
-import Item from '../ListProducts/Item';
+import { Link } from 'react-router-dom';
+import '../CardButtons/ItemCount.css';
+import ModalCustom from '../modal/modal';
+import AlertDialog from '../modal/modal2';
+
+export default function ItemCount ({ action1 }) {
 
 
-
-export default function ItemCount ({ action1, action2, action3 }) {
-    
     return(
         <div className="buttons">
-            <Button color="error"  onClick={action3}>-</Button>
             <div className="cart-add">
-            <Button variant="contained" color="error" onClick={action1}>Agregar al carrito</Button>
+                <Button variant="contained" color="error" size='large' className='button' onClick={action1}><AlertDialog /></Button>
             </div>
-            <Button color="error" onClick={action2}>+</Button>
+                <div className="cart-add">
+            <Link to={`/`}  className='botonContinue'><Button variant="outlined"color="error" className='button' size='large'>Volver a los productos</Button></Link>
+            </div>
         </div>
     )
 }

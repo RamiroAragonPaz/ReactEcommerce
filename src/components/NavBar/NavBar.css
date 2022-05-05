@@ -9,7 +9,7 @@ header{
     display: flex;
     list-style: none;
     margin-right: 2vw;
-    align-items: flex-start;
+    align-items: center;
   }
   li{
     margin-left: 1vw;
@@ -22,3 +22,4 @@ header{
     text-decoration: none;
     color: #b80909
   }
+  

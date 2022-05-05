@@ -4,18 +4,87 @@ import { useContext } from 'react'
 import { CartContext } from '../Context/CartContext'
 import { Link } from 'react-router-dom'
 import './CartWidget.css'
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
+import { Button } from '@mui/material';
+import DeleteIcon from '@mui/icons-material/Delete';
+import Divider from '@mui/material/Divider';
+
 
 const CartWidget = () =>{
-    const { cartProducts } = useContext(CartContext)
+
+    //Menu
+    const [anchorEl, setAnchorEl] = React.useState(null);
+  const open = Boolean(anchorEl);
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+
+
+
+    const { cartProducts, removeProducts, totalPrice } = useContext(CartContext)
     const carrito = () => {
         console.log('cart:', cartProducts)
     }
     return (
         <div className='cart' color="error">
-            <Link to={`/cart`}>
-                <ShoppingCartIcon />
-                </Link>
-                <p className='cart-text'>{cartProducts.length}</p>
+
+            <div>
+                <Button
+                    color="error"
+                    id="basic-button"
+                    aria-controls={open ? 'basic-menu' : undefined}
+                    aria-haspopup="true"
+                    aria-expanded={open ? 'true' : undefined}
+                    onClick={handleClick}
+                >
+                <ShoppingCartIcon  color='error'/> 
+                    <p className='cart-text'>{cartProducts.length}</p>
+                </Button>
+                
+                            <Menu
+                                id="basic-menu"
+                                anchorEl={anchorEl}
+                                open={open}
+                                onClose={handleClose}
+                                MenuListProps={{
+                                'aria-labelledby': 'basic-button',
+                                }}
+                                className='menuCart'
+                            >
+                                {cartProducts.map( (cartProduct) => {
+                            const { id, image, price, title} = cartProduct
+                        return(
+                            <div>
+                                <MenuItem className='miniCarrito-items' key={id}>
+                                    <div>
+                                        <img className='miniCart-image' src={`./${image}`} /> 
+                                    </div>
+                                    <div className='textoMiniCart' >
+                                        <p>{title}</p>
+                                        <span>$ {price}</span>
+                                    </div>
+                                        <DeleteIcon className='deleteIcon' onClick={() => removeProducts(cartProduct)}/>
+                                 </MenuItem>
+                                 <Divider />
+                                </div>
+                                )
+                        })}
+                    <p className="total">Total: {totalPrice}</p>
+                    <Divider />
+                    <Link to={`/cart`}><MenuItem onClick={handleClose}>Finalizar la Compra</MenuItem></Link>
+                </Menu>
+                </div>
+
+
+
+
+
+
+            
 
         </div>  
     )
