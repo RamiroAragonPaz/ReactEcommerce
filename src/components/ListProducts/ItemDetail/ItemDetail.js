@@ -11,11 +11,10 @@ import db from '../../../Firebase/Firebase'
 const ItemDetails = ({data}) => {
     const { id }  = useParams()
     const [product, setProduct] = useState({})
-    const { title, description, price, duration, image, stock, initial } = product
+    const { title, description, price, duration, image } = product
     const [count, setCount] = useState(1)
     const navigate = useNavigate()
     const { cartProducts, addProducts } = useContext(CartContext)
-
 
     const addOnCart = () => {
         if (count > 0 ){

@@ -21,7 +21,6 @@ function NavBar() {
                 <li>< Button color="error"><Link to={"/Recetarios"}>Recetarios</Link></Button></li>
                 <li>< Button color="error"><Link to={"/Planesintegrales"}>Planes Integrales</Link></Button></li>
                 <li><Button color="error"><a href="http://maruvalanianutricion.com.ar/#unPocoDeMi" target="_blank">Sitio</a></Button></li>
-                <li><Button color="error"><Link to={"/contacto"}>Contacto</Link></Button></li>
                 <CartWidget />
             </ul>
         </header>

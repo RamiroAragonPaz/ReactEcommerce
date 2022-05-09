@@ -9,14 +9,11 @@
     margin: 0;
     color: #b80909
 }
-.menuCart{
-  min-width: 30vw!important;
-}
 
 .miniCart-image{
   margin-top: 2vh;
   min-height: 6.5vh;
-  width: 2vw;
+  width: 3vw;
   margin-left: 0vw;
   margin-right: .5vw;
 }

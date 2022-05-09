@@ -13,8 +13,9 @@ import Divider from '@mui/material/Divider';
 
 const CartWidget = () =>{
 
-    //Menu
-    const [anchorEl, setAnchorEl] = React.useState(null);
+  const { cartProducts, removeProducts, totalPrice } = useContext(CartContext)
+  //Menu
+  const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
@@ -23,12 +24,6 @@ const CartWidget = () =>{
     setAnchorEl(null);
   };
 
-
-
-    const { cartProducts, removeProducts, totalPrice } = useContext(CartContext)
-    const carrito = () => {
-        console.log('cart:', cartProducts)
-    }
     return (
         <div className='cart' color="error">
 
@@ -61,7 +56,7 @@ const CartWidget = () =>{
                             <div>
                                 <MenuItem className='miniCarrito-items' key={id}>
                                     <div>
-                                        <img className='miniCart-image' src={`./${image}`} /> 
+                                        <img className='miniCart-image' src={image} /> 
                                     </div>
                                     <div className='textoMiniCart' >
                                         <p>{title}</p>

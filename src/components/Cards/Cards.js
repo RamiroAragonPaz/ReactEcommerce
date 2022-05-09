@@ -5,8 +5,6 @@ import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
-import ItemCount from '../CardButtons/ItemCount';
-import ItemDetail from '../ListProducts/ItemDetail/ItemDetailContainer'
 import { Link } from 'react-router-dom'
 import Button from '@mui/material/Button';
 import { CartContext } from '../Context/CartContext'
@@ -22,25 +20,22 @@ const bull = (
 );
 
 export default function BasicCard( {data} ) {
-  const { title, description, category,  price, duration, image, id, stock, initial} = data
+  const { title, description, category,  price, duration, image, id} = data
 
-  const { cartProducts, addProducts} = useContext(CartContext)
-  
-  return (
-    
+  return (    
     <Card className="card" sx={{ minWidth: 275 }}>
       <Link to={`/${category}/${id}`}>
         <CardContent>
           <div className="image-container">
           <img className="image"  src={`./${image}`} alt={image} />
           </div>
-          <Typography class="Typography"variant="h5" component="div">
+          <Typography className="Typography"variant="h5" component="div">
             {title}
           </Typography>
           <Typography sx={{ mb: 1.5 }} color="text.secondary">
             <p>{description}</p>
           </Typography>
-          <Typography class="Typography"variant="body2">
+          <Typography className="Typography"variant="body2">
             <p>Precio: ${price}</p>
             <p>Duración: {duration}</p>
           </Typography>
@@ -50,6 +45,5 @@ export default function BasicCard( {data} ) {
         </CardActions>
       </Link>
     </Card>
-    
   );
 }

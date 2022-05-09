@@ -1,5 +1,4 @@
 import ItemList from '../ListProducts/ItemList'
-import Typography from '@mui/material/Typography';
 
 const ItemListContainer = () =>{
     

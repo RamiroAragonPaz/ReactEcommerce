@@ -16,25 +16,23 @@ import { addDoc, collection } from 'firebase/firestore';
 
 const Cart = () => {
     const [openModal, setOpenModal] = useState(false)
+    
     const [contactData, setContactData] = useState({
         name: "",
         phone: '',
         email: '',
     })
     const { cartProducts, removeProducts, totalPrice} = useContext(CartContext)
+    
     const [order, setOrder] = useState(
         {
             buyer : contactData,
-        items: cartProducts,
-        total: totalPrice
-    }
+            items: cartProducts,
+            total: totalPrice
+        }
     )
-    console.log("order", order)
-
-
     const[succesOrder, setSuccesOrder ] = useState()
-
-
+    
     const handleSubmit = (e) =>{
         e.preventDefault()
         let preOrder = {...order,
@@ -44,7 +42,6 @@ const Cart = () => {
             buyer: contactData})
             pushOrder(preOrder)
     }
-
 
     const pushOrder = async (preOrder) => {
         const orderFirebase = collection(db, 'ordenes')

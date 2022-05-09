@@ -49,14 +49,14 @@
 }
 .cart-image-container{
   width: 12vw;
-  height: 15vh;
+  height: 20vh;
   overflow: hidden;
 }
 .cart-image{
   margin-right: 2vw;
   border-radius: 2.5%;
   width: 7vw;
-  height: 20vh;
+  height: auto;
 }
 .finaliza-input-list{
   display: flex;
