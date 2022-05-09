@@ -1,6 +1,6 @@
-# Bienvenido al E-commerce proyecto final
+# Bienvenido al Proyecto final E-commerce 
 
-Este proyecto se realizó a los fines de cumplir con todos los requisitos del proyecto final del curso de React perteneciente a la carrera de FrontEnd de CoderHouse
+Este proyecto se realizó a los fines de cumplir con todos los requisitos del proyecto final del curso de React perteneciente a la carrera de FrontEnd de CoderHouse.
 
 ## Principales Funcionalidades
 
@@ -17,7 +17,7 @@ Se utilizó la biblioteca Material UI para dar un estilo homogéneo a los distin
 ## NavBar
 
 Se utilizó React-router-dom para conseguir la funcionalidad de movilidad entre páginas y de comportamiento por defecto.
-Además permte realizar distintos filtros de productos con los diferentes botones discriminando entre "Planes", "Recetarios" y "Planes Integrales"
+Además permte realizar distintos filtros de productos con los diferentes botones discriminando entre "Planes", "Recetarios" y "Planes Integrales".
 
 ### ItemList
 
@@ -32,7 +32,7 @@ Recibe información a través del parámetro `data` y ensambla el componente Car
 
 En esta pantalla se presenta la información detallada y redistribuida del producto seleccionado con el componente ItemCount el cual agrega al Context Cart el producto seleccionado al dar "Agregar al carrito" y actualiza el CartWidget mostrando el número de cantidad de productos agregados.
 
-## CartWidget
+### CartWidget
 
 Este componente muestra los distintos productos seleccionados en la pantalla previa de ItemDetail, realiza una sumatoria y muestra el total actual permitiendo suprimir el producto que se desee y presenta un enlace "Finalizar la compra" el cuál lleva a la pantalla final para terminar la compra.
 
@@ -40,6 +40,6 @@ Este componente muestra los distintos productos seleccionados en la pantalla pre
 
 Muestra la pantalla final donde se visualizan los distintos productos seleccionados permitiendo finalizar la compra presentando un modal para ingresar los datos de contacto y al seleccionar el botón "Enviar" devuelve un numero de Id de orden de pedido.
 
-## Adicionales
+### Adicionales
 
 Se agregó el botón "Sitio" enlazado al sitio oficial referido previamente para dar interconetcividad entre ambos elementos.
