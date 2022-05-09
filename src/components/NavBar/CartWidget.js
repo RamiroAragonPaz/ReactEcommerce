@@ -51,18 +51,17 @@ const CartWidget = () =>{
                                 className='menuCart'
                             >
                                 {cartProducts.map( (cartProduct) => {
-                            const { id, image, price, title} = cartProduct
+                            const { id,category , image, price, title} = cartProduct
                         return(
                             <div>
                                 <MenuItem className='miniCarrito-items' key={id}>
-                                    <div>
-                                        <img className='miniCart-image' src={image} /> 
-                                    </div>
-                                    <div className='textoMiniCart' >
-                                        <p>{title}</p>
-                                        <span>$ {price}</span>
-                                    </div>
-                                        <DeleteIcon className='deleteIcon' onClick={() => removeProducts(cartProduct)}/>
+                                    <Link to={`/${category}/${id}`}>
+                                        <div className='textoMiniCart' >
+                                            <p>{title}</p>
+                                            <span>Precio: ${price}</span>
+                                        </div>
+                                    </Link>
+                                    <DeleteIcon className='deleteIcon' onClick={() => removeProducts(cartProduct)}/>    
                                  </MenuItem>
                                  <Divider />
                                 </div>

@@ -103,15 +103,15 @@ const Cart = () => {
                     <div className='finaliza-input-list'>
                         <div className="finaliza-input-container">
                             <label>Nombre y Apellido</label>
-                            <input className='finaliza-input' tipe="text" name='name' placeholder='Maru Valania' onChange={handleChange} value={contactData.name}></input>
+                            <input className='finaliza-input' tipe="text" name='name' required placeholder='Maru Valania' onChange={handleChange} value={contactData.name}></input>
                         </div>
                         <div className="finaliza-input-container">
                             <label>Teléfono</label>
-                            <input className='finaliza-input' tipe="number" name='phone' placeholder='0221549493' onChange={handleChange} value={contactData.phone}></input>
+                            <input className='finaliza-input' tipe="number" name='phone' required placeholder='0221549493' onChange={handleChange} value={contactData.phone}></input>
                         </div>
                         <div className="finaliza-input-container">
                             <label>E-mail</label>
-                            <input className='finaliza-input' tipe="mail" name='email' placeholder='info@maruvalanianutricion.com.ar' onChange={handleChange} value={contactData.email}></input>
+                            <input className='finaliza-input' tipe="mail" name='email' required placeholder='info@maruvalanianutricion.com.ar' onChange={handleChange} value={contactData.email}></input>
                         </div>
                     </div>
                     <div className='finaliza-buttons'>
