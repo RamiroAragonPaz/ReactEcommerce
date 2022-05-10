@@ -27,7 +27,7 @@ export default function BasicCard( {data} ) {
       <Link to={`/${category}/${id}`}>
         <CardContent>
           <div className="image-container">
-          <img className="image"  src={`./${image}`} alt={image} />
+          <img className="image"  src={`./${image}`} alt={`${image}`} />
           </div>
           <Typography className="Typography"variant="h5" component="div">
             {title}

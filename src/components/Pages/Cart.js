@@ -69,7 +69,7 @@ const Cart = () => {
                 <div>
                     <MenuItem className='carrito-items' key={id}>
                         <div className='cart-image-container'>
-                            <img className='cart-image' src={`./${image}`} /> 
+                            <img className='cart-image' src={`./${image}`} alt={`${image}`} /> 
                         </div>
                         <div className='texto' >
                             <p>{title}</p>

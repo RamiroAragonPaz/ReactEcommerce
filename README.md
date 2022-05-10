@@ -42,4 +42,4 @@ Muestra la pantalla final donde se visualizan los distintos productos selecciona
 
 ## Adicionales
 
-Se agregó el botón "Sitio" enlazado al sitio oficial referido previamente para dar interconetcividad entre ambos elementos.
+Se agregó el botón "Sitio" enlazado al sitio oficial referido previamente para dar interconetcividad entre ambos elementos. 
