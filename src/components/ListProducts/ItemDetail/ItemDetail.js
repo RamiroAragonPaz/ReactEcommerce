@@ -46,7 +46,7 @@ const ItemDetails = ({data}) => {
         <div className="ItemDetailContainer">           
             <h4>{title}</h4>
             <div className='detailcontent'>
-                <img className='detail-img-big' src={`../${image}` } alt={image}/>
+                <img className='detail-img-big' src={`../${image}` } alt={`${image}`}/>
                 <div>
                     <p className='detail-price' >Precio: ${price}</p>
                     <p className='detail-duration' >Duración: {duration}</p>
