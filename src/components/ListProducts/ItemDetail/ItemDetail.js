@@ -6,6 +6,8 @@ import ItemCount from '../../CardButtons/ItemCount';
 import { CartContext } from '../../Context/CartContext';
 import { doc, getDoc } from 'firebase/firestore';
 import db from '../../../Firebase/Firebase'
+import CircularProgress from '@mui/material/CircularProgress';
+
 
 
 const ItemDetails = ({data}) => {
@@ -15,6 +17,7 @@ const ItemDetails = ({data}) => {
     const [count, setCount] = useState(1)
     const navigate = useNavigate()
     const { cartProducts, addProducts } = useContext(CartContext)
+    const [loading, setLoading] = useState(true)
 
     const addOnCart = () => {
         if (count > 0 ){
@@ -39,26 +42,31 @@ const ItemDetails = ({data}) => {
     }
 
     useEffect( () => {
-        getProduct()
+        getProduct().then( ()=>{
+        setLoading(false)})
     }, [id])
    
     return (
-        <div className="ItemDetailContainer">           
-            <h4>{title}</h4>
-            <div className='detailcontent'>
-                <img className='detail-img-big' src={`../${image}` } alt={`${image}`}/>
-                <div>
-                    <p className='detail-price' >Precio: ${price}</p>
-                    <p className='detail-duration' >Duración: {duration}</p>
-                    <p className='detail-descriptiontitle'>Cantidad: {count}</p>
-                    <p className='detail-descriptiontitle'>Descripción:</p>
-                    <p className='detail-description'>{description}</p>    
-                    <ItemCount action1={addOnCart} data={product}/>
-                </div>
+        <div className="ItemDetailContainer">   
+            {loading ? (<CircularProgress className="spinner" color="error"/>)
+                : (
+                    <>
+                        <h4>{title}</h4>
+                        <div className='detailcontent'>
+                            <img className='detail-img-big' src={`../${image}` } alt={`${image}`}/>
+                            <div>
+                                <p className='detail-price' >Precio: ${price}</p>
+                                <p className='detail-duration' >Duración: {duration}</p>
+                                <p className='detail-descriptiontitle'>Cantidad: {count}</p>
+                                <p className='detail-descriptiontitle'>Descripción:</p>
+                                <p className='detail-description'>{description}</p>    
+                                <ItemCount action1={addOnCart} data={product}/>
+                            </div>
+                        </div>
+                    </>
+                )}
             </div>
-            
-        </div>
-    )
+        )
 }
 
 export default ItemDetails;
