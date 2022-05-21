@@ -5,8 +5,8 @@ function Footer(){
     
     return(
         <footer>
-            <p>Copyright 2022 por Ramiro Aragón Paz</p>
-		    <p>Todos los derechos reservados</p>
+            <p className='texto1footer'>Diseñado por Ramiro Aragón Paz</p>
+		    <p className='texto2footer'>Todos los derechos reservados</p>
         </footer>
     )
 }

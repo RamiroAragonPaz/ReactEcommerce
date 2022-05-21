@@ -7,7 +7,8 @@ import { CartContext } from '../../Context/CartContext';
 import { doc, getDoc } from 'firebase/firestore';
 import db from '../../../Firebase/Firebase'
 import CircularProgress from '@mui/material/CircularProgress';
-
+import { Button } from '@mui/material';
+import { Link } from 'react-router-dom'
 
 
 const ItemDetails = ({data}) => {
@@ -53,14 +54,19 @@ const ItemDetails = ({data}) => {
                     <>
                         <h4>{title}</h4>
                         <div className='detailcontent'>
-                            <img className='detail-img-big' src={`../${image}` } alt={`${image}`}/>
-                            <div>
+                            <div className='detail-img-container'>
+                                <img className='detail-img-big' src={`../${image}` } alt={`${image}`}/>
+                            </div>
+                            <div  className='ItemDetails-Container'>
                                 <p className='detail-price' >Precio: ${price}</p>
                                 <p className='detail-duration' >Duración: {duration}</p>
                                 <p className='detail-descriptiontitle'>Cantidad: {count}</p>
                                 <p className='detail-descriptiontitle'>Descripción:</p>
                                 <p className='detail-description'>{description}</p>    
                                 <ItemCount action1={addOnCart} data={product}/>
+                                <div className='cart-button'>
+                                    <Link to={`/cart`}><Button variant='outlined' color='error' >Ir al carrito</Button></Link>
+                                </div>
                             </div>
                         </div>
                     </>

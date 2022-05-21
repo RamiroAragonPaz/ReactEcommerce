@@ -22,4 +22,29 @@ header{
     text-decoration: none;
     color: #b80909
   }
+  @media screen and (min-width: 1px) and (max-width:767px) {
+    header{
+      max-width: 100%;
+      justify-content: space-between;
+      box-shadow: 0 0 3px #00000082;
+    }
+    .container-logo{
+      max-width: fit-content;
+      display: flex;
+      justify-self: center;
+    }
+    .ulNavbar{
+      display: none;
+    }
+    .img-header{
+      width: fit-content;
+      margin: 0;
+      overflow: hidden;
+      max-width: 100%;
+    }
+    .subtitle{
+      text-align: center;
+      margin: 2.5vw;
+    }
+  }
   

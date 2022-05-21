@@ -35,3 +35,45 @@ h4{
     box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.514);
     border-radius: 5%;
 }
+.cart-button{
+    display: none;
+}
+@media screen and (min-width: 1px) and (max-width:767px) {
+    *{
+      max-width: 100%;  
+    }
+    .ItemListContainer{
+        display: grid;
+        grid-template-columns: auto;
+        grid-row-gap: 5vh;
+        margin: 0;
+    }
+    .detailcontent{
+        display: block;
+      }
+    .detail-img-container{
+        display: flex;
+        justify-content: center;
+    }
+    .detail-img-big{
+        width: fit-content;
+        min-height: auto;
+        margin: auto;
+    }
+    .ItemDetails-Container{
+        text-align: center;
+    }
+    .detail-description{
+        text-align: center;
+        margin: auto;
+        width: 50vw;
+    }
+    .cart-add{
+        margin-top: 2vh;
+    }
+    .cart-button{
+        margin-top: 2vh;
+        justify-content: center;
+        display: flex;
+    }
+}

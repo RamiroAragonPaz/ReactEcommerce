@@ -7,8 +7,6 @@ import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import { Link } from 'react-router-dom'
 import Button from '@mui/material/Button';
-import { CartContext } from '../Context/CartContext'
-import { useContext } from 'react'
 
 const bull = (
   <Box
@@ -27,9 +25,9 @@ export default function BasicCard( {data} ) {
       <Link to={`/${category}/${id}`}>
         <CardContent>
           <div className="image-container">
-          <img className="image"  src={`./${image}`} alt={`${image}`} />
+            <img className="image"  src={`./${image}`} alt={`${image}`} />
           </div>
-          <Typography className="Typography"variant="h5" component="div">
+          <Typography className="Typography titleCard"variant="h5" component="div">
             {title}
           </Typography>
           <Typography sx={{ mb: 1.5 }} color="text.secondary">
